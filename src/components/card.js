@@ -5,17 +5,24 @@ import {
 
 let userCard  = {
 	property: {
-		age: 3
+		age: 3,
+		members: [
+			{name: 'john'}
+		]
 	},
 	method: {
-		click: () => {
-			console.log(this);
+		click: function(evt){
+			let {property} = this;
+			property.age++;
 		}
 	},
 	template: `
 	<div onClick="click">
 		<p>age: {{age * 2 + ' years old'}}</p>
 		<!-- blah -->
+		<ul x-for="members" >
+			<li>{{name}}</li>	
+		</ul>
 	</div>`
 }
 
