@@ -20,7 +20,7 @@ let userCard  = {
 	},
 	template: `
 	<div onClick="click">
-		<p>age: {{age * 2 + ' years old' }} </p>
+		<p>age: {{age * 2 + ' years old' }} {{a.b.c}}</p>
 		<!-- blah -->
 		<ul x-for="members" >
 			<li>{{name}}</li>	
