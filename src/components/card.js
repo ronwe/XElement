@@ -19,8 +19,8 @@ let userCard  = {
 		}
 	},
 	template: `
-	<div onClick="click">
-		<p>age: {{age * 2 + ' years old' }} {{a.b.c}}</p>
+	<div>
+		<p onClick="click">age: {{age * 2 + ' years old' }} {{a.b.c}}</p>
 		<!-- blah -->
 		<ul x-for="m in members" >
 			<li>{{m.name}}</li>	
