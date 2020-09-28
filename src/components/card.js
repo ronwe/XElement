@@ -22,8 +22,8 @@ let userCard  = {
 	<div onClick="click">
 		<p>age: {{age * 2 + ' years old' }} {{a.b.c}}</p>
 		<!-- blah -->
-		<ul x-for="members" >
-			<li>{{name}}</li>	
+		<ul x-for="m in members" >
+			<li>{{m.name}}</li>	
 		</ul>
 	</div>`
 }
