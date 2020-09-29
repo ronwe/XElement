@@ -16,7 +16,8 @@ let userCard  = {
 			let {property} = this;
 			property.age++;
 			property.members[0].name  = 'peter';
-			property.members.push({name: 'kate'});
+			property.members.push({name: 'kate'},{name: 'alibaba'});
+			property.members.splice(1, 1, {name: 'kevin'}, {name: 'tony'});
 		}
 	},
 	template: `
