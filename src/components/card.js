@@ -20,15 +20,16 @@ let userCard  = {
 			*/
 			//property.members = [{name: 'hax'}];
 			property.members.push({name: 'kate'},{name: 'alibaba'});
-			//property.members.splice(1, 1, {name: 'kevin'}, {name: 'tony'});
+			property.members.splice(1, 1, {name: 'kevin'}, {name: 'tony'});
+			property.members.unshift({name: 'jack'});
 		}
 	},
 	template: `
 	<div>
 		<p onClick="click">age: {{age * 2 + ' years old' }} {{a.b.c}}</p>
 		<!-- blah -->
-		<ul x-for="(m, i) in members" >
-			<li><sup>{{i}}</sup> {{m.name}}</li>	
+		<ul x-for="m in members" >
+			<li><sup></sup> {{m.name}}<input /></li>	
 		</ul>
 	</div>`
 }
