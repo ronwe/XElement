@@ -3,10 +3,11 @@ import {
 }  from '/lib/index.js';
 
 
+var i = 0;
 let userCard  = {
 	property: {
 		age: 3,
-		a: { b : {c:1}},
+		a: { b : {}},
 		members: [
 			{name: 'john'}
 		]
@@ -14,14 +15,17 @@ let userCard  = {
 	method: {
 		click: function(evt){
 			let {property} = this;
-			property.age++;
-			/*
-			property.members[0].name  = 'peter';
-			*/
-			//property.members = [{name: 'hax'}];
+      /*
+      if (!i++) {
+			property.members[0].name  = 'peter' + (+new Date);
+      }
 			property.members.push({name: 'kate'},{name: 'alibaba'});
 			property.members.splice(1, 1, {name: 'kevin'}, {name: 'tony'});
 			property.members.unshift({name: 'jack'});
+			property.members = [{name: 'hax'}];
+			property.age++;
+      */
+      property.a = {b: {c: 2}};
 		}
 	},
 	template: `
