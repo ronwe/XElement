@@ -22,11 +22,12 @@ let userCard  = {
 			property.members.push({name: 'kate'},{name: 'alibaba'});
 			property.members.splice(1, 1, {name: 'kevin'}, {name: 'tony'});
 			property.members.unshift({name: 'jack'});
-			property.members = [{name: 'hax'}];
+			//property.members = [{name: 'hax'}];
 			property.age++;
-      */
       //property.a = {b: {c: 2}};
       property.a.b = {c: 2};
+      */
+      delete property.a.b.c;
 		}
 	},
 	template: `
