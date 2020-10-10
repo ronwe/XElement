@@ -12,6 +12,12 @@ let userCard  = {
 			{name: 'john'}
 		]
 	},
+  attribute: {
+    name: {
+      default: 'Jerry',
+      onChange: 'click'
+    } 
+  },
 	method: {
 		click: function(evt){
 			let {property} = this;
