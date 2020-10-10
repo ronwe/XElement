@@ -7,7 +7,7 @@ var i = 0;
 let userCard  = {
 	property: {
 		age: 3,
-		a: { b : {}},
+		a: { b : {c:1}},
 		members: [
 			{name: 'john'}
 		]
@@ -25,7 +25,8 @@ let userCard  = {
 			property.members = [{name: 'hax'}];
 			property.age++;
       */
-      property.a = {b: {c: 2}};
+      //property.a = {b: {c: 2}};
+      property.a.b = {c: 2};
 		}
 	},
 	template: `
