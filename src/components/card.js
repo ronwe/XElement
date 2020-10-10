@@ -15,12 +15,18 @@ let userCard  = {
   attribute: {
     name: {
       default: 'Jerry',
-      onChange: 'click'
+      onChange: 'watchName'
     } 
   },
 	method: {
+    watchName: function() {
+			let {property, attribute} = this;
+      console.log('attribute', attribute, attribute.name);
+
+    },
 		click: function(evt){
-			let {property} = this;
+			let {property, attribute} = this;
+      attribute.name = 'John';
       /*
       if (!i++) {
 			property.members[0].name  = 'peter' + (+new Date);
@@ -33,7 +39,7 @@ let userCard  = {
       //property.a = {b: {c: 2}};
       property.a.b = {c: 2};
       */
-      delete property.a.b.c;
+      //property.a.b.c = attribute.name;
 		}
 	},
 	template: `
