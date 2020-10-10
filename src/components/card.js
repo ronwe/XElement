@@ -18,14 +18,24 @@ let userCard  = {
       onChange: 'watchName'
     } 
   },
+  events: [ 
+		'attrChange'
+  ],
+  publicly: {
+		updateAttrName: function(newName) {
+			let {property, attribute} = this;
+      attribute.name = newName;
+		}
+  },
 	method: {
     watchName: function() {
-			let {property, attribute} = this;
+			let {property, attribute, events} = this;
       console.log('attribute', attribute, attribute.name);
+			events.attrChange(attribute.name);
 
     },
 		click: function(evt){
-			let {property, attribute} = this;
+			let {property, attribute, events} = this;
       attribute.name = 'John';
       /*
       if (!i++) {
