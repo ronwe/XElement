@@ -42,7 +42,6 @@ let userCard  = {
 			properties.members[0].name  = 'peter' + (+new Date);
       }
 			*/
-			/*
 			properties.members.push({name: 'kate'},{name: 'alibaba'});
 			properties.members.splice(1, 1, {name: 'kevin'}, {name: 'tony'});
 			properties.members.unshift({name: 'jack'});
@@ -51,7 +50,6 @@ let userCard  = {
       //properties.a = {b: {c: 2}};
       properties.a.b = {c: 2};
       //properties.a.b.c = attribute.name;
-			*/
 		}
 	},
 	template: `
