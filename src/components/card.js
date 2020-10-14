@@ -5,14 +5,14 @@ import {
 
 var i = 0;
 let userCard  = {
-	properties: {
+	props: {
 		age: 3,
 		a: { b : {c:1}},
 		members: [
 			{name: 'john'}
 		]
 	},
-  attributes: {
+  attrs: {
     name: {
       default: 'Jerry',
       onChange: 'watchName'
@@ -23,33 +23,33 @@ let userCard  = {
   ],
   publicly: {
 		updateAttrName: function(newName) {
-			let {properties, attribute} = this;
+			let {props, attribute} = this;
       attribute.name = newName;
 		}
   },
 	methods: {
     watchName: function() {
-			let {properties, attributes, events} = this;
-      console.log('attribute', attributes, attributes.name);
-			events.attrChange(attributes.name);
+			let {props, attrs, events} = this;
+      console.log('attribute', attrs, attrs.name);
+			events.attrChange(attrs.name);
 
     },
 		click: function(evt){
-			let {properties, attributes, events} = this;
+			let {props, attrs, events} = this;
 			/*
-      attributes.name = 'John';
+      attrs.name = 'John';
       if (!i++) {
-			properties.members[0].name  = 'peter' + (+new Date);
+			props.members[0].name  = 'peter' + (+new Date);
       }
 			*/
-			properties.members.push({name: 'kate'},{name: 'alibaba'});
-			properties.members.splice(1, 1, {name: 'kevin'}, {name: 'tony'});
-			properties.members.unshift({name: 'jack'});
-			//properties.members = [{name: 'hax'}];
-			properties.age++;
-      //properties.a = {b: {c: 2}};
-      properties.a.b = {c: 2};
-      //properties.a.b.c = attribute.name;
+			props.members.push({name: 'kate'},{name: 'alibaba'});
+			props.members.splice(1, 1, {name: 'kevin'}, {name: 'tony'});
+			props.members.unshift({name: 'jack'});
+			//props.members = [{name: 'hax'}];
+			props.age++;
+      //props.a = {b: {c: 2}};
+      props.a.b = {c: 2};
+      //props.a.b.c = attribute.name;
 		}
 	},
 	template: `
