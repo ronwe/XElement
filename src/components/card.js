@@ -23,8 +23,8 @@ let userCard  = {
   ],
   publicly: {
 		updateAttrName: function(newName) {
-			let {props, attribute} = this;
-      attribute.name = newName;
+			let {props, attrs} = this;
+      attrs.name = newName;
 		}
   },
 	methods: {
