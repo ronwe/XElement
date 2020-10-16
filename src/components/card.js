@@ -54,10 +54,15 @@ let userCard  = {
 	},
 	template: `
 	<div>
+		<slot name="title"></slot>
 		<p onClick="click">age: {{age * 2 + ' years old' }} {{a.b.c}}</p>
 		<!-- blah -->
 		<ul x-for="m in members" >
-			<li><sup></sup> {{m.name}}<input /></li>	
+			<li>
+				<sup></sup> 
+				{{m.name}}
+				<slot name="members" ></slot>
+			</li>	
 		</ul>
 	</div>`
 }
