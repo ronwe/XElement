@@ -1,8 +1,15 @@
 <html>
+<head>
+	<style>
+	.title {
+		border: 1px solid gray;
+	}	
+	</style>
+</head>
 <body>
   <user-card name="TOM" email="<b>email</b>">
-		<p slot="title">Title</p>
-		<input  slot="members"/>
+		<p class="title" slot="title">Title<b>!</b></p>
+		<input />
   </user-card>
   <script src="./components/card.js" type="module"></script>
 	<script>
