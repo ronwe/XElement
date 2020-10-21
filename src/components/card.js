@@ -36,6 +36,8 @@ let userCard  = {
     },
 		click: function(evt){
 			let {props, attrs, events} = this;
+			console.log(props.toRaw());
+			return;
 			/*
       attrs.name = 'John';
       if (!i++) {
@@ -43,9 +45,9 @@ let userCard  = {
       }
 			props.members.push({name: 'kate'},{name: 'alibaba'});
 			props.members.splice(1, 1, {name: 'kevin'}, {name: 'tony'});
+			*/
 			props.members.unshift({name: 'jack'});
 			//props.members = [{name: 'hax'}];
-			*/
 			props.age++;
       //props.a = {b: {c: 2}};
       props.a.b = {c: 2};
