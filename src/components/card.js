@@ -23,15 +23,15 @@ let userCard  = {
   ],
   publicly: {
 		updateAttrName: function(newName) {
-			let {props, attrs} = this;
+			let {props, attrs, methods} = this;
       attrs.name = newName;
+			methods.click();
 		}
   },
 	methods: {
     watchName: function() {
 			let {props, attrs, events} = this;
-      console.log('attribute', attrs, attrs.name);
-			events.attrChange(attrs.name);
+			events.attrChange.emit(attrs.name);
 
     },
 		click: function(evt){
@@ -41,11 +41,11 @@ let userCard  = {
       if (!i++) {
 			props.members[0].name  = 'peter' + (+new Date);
       }
-			*/
 			props.members.push({name: 'kate'},{name: 'alibaba'});
 			props.members.splice(1, 1, {name: 'kevin'}, {name: 'tony'});
 			props.members.unshift({name: 'jack'});
 			//props.members = [{name: 'hax'}];
+			*/
 			props.age++;
       //props.a = {b: {c: 2}};
       props.a.b = {c: 2};
