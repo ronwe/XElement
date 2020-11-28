@@ -18,6 +18,9 @@ let userCard  = {
       onChange: 'watchName'
     } 
   },
+  computed: {
+    ageTip: ({props}) => `I'am ${props.age} years old`
+  },
   events: [ 
 		'attrChange'
   ],
@@ -58,6 +61,7 @@ let userCard  = {
 		<slot name="title">Default Title</slot>
 		<p onClick="click">age: {{age * 2 + ' years old' }} {{a.b.c}}</p>
 		<!-- blah -->
+    {{ageTip}}
 		<ul x-for="m in members" >
 			<li>
 				<sup></sup> 
