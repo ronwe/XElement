@@ -18,6 +18,9 @@ let userCard  = {
       onChange: 'watchName'
     } 
   },
+	watch: {
+		age: (arg) => console.log('watching', this, arg)
+	},
   computed: {
     ageTip: ({props}) => `I'am ${props.age} years old`
   },
