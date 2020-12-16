@@ -38,7 +38,8 @@ let userCard  = {
 			events.attrChange.emit(attrs.name);
 
     },
-		click: function(evt){
+		click: function(...args){
+			console.log(this, args);
 			let {props, attrs, events} = this;
 			/*
       attrs.name = 'John';
@@ -59,7 +60,7 @@ let userCard  = {
 	template: `
 	<div>
 		<slot name="title">Default Title</slot>
-		<p onClick="click">age: {{age * 2 + ' years old' }} {{a.b.c}}</p>
+		<p onClick="click(age, 2)">age: {{age * 2 + ' years old' }} {{a.b.c}}</p>
 		<!-- blah -->
     {{ageTip}}
 		<ul x-for="m in members" >
